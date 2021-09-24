@@ -1,0 +1,9 @@
+<!-- this #variable is called a "template reference variable" -->
+
+<section class="HomePage">
+  <!-- <app-loginPage ></app-loginPage> -->
+  <app-register
+    (registerUserEvent)="registerUser($event)"
+    (cancelRegistration)="cancelRegisterMode($event)"
+  ></app-register>
+</section>

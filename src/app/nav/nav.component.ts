@@ -8,10 +8,10 @@ import { AccountService } from '../_services/account.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private accountService: AccountService) { }
-
+  constructor(public accountService: AccountService) { }
+  public user: any;
   ngOnInit(): void {
-
+    this.accountService.currentUser$.subscribe(value => this.user = value);
   }
 
   logout() {

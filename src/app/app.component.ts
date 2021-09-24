@@ -13,12 +13,22 @@ export class AppComponent implements OnInit {
   title = 'dating-client';
   users: any;
   loggedIn: boolean = false;
+  public routeName: string = "";
 
-  constructor(private http: HttpClient, private accountService: AccountService) {}
+  constructor(private http: HttpClient, public accountService: AccountService) {}
 
   ngOnInit() {
-    console.log("INIT APP");
+    console.log("[AppComponent] ngOnInit");
     this.accountService.currentUser$.subscribe(res => {console.log('RES', res)})
+  }
+
+  ngOnChanges(): void {
+    console.log("OnChanges routeName: ", this.routeName);
+  }
+
+  logChangeEvent(event: string) {
+    console.log('[AppComponent] logChangeEvent', event);
+    this.routeName = event;
   }
 
   getUsers() {

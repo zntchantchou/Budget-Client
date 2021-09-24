@@ -1,0 +1,35 @@
+<!-- this #variable is called a "template reference variable" -->
+
+<section class="signUpPage">
+  <form #loginForm="ngForm" autocomplete="off" class="signUpForm">
+    <h2 class="form-title">Sign Up</h2>
+    <div class="form-group">
+      <label for="signup-username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="model.username"
+        id="signup-username"
+        name="username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="signup-password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="model.password"
+        id="signup-password"
+        name="password"
+      />
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="registerUser()">Sign Up</button>
+    </div>
+    <div class="form-group">
+      <button class="btn cancelBtn" (click)="cancelRegister()">Cancel</button>
+    </div>
+  </form>
+</section>

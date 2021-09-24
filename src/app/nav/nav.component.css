@@ -1,3 +1,7 @@
 .nav-container {
-  height: 56px;
+  height: 62px;
+}
+
+.nav-title {
+  font-size: 1.5em;
 }

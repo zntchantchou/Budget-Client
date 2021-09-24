@@ -1,10 +1,14 @@
 <div class="container nav-container">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">BonsComptes</a>
+      <a class="navbar-brand nav-title" href="#">BonsComptes</a>
 
       <!--  this should only appear to a logged in user -->
+      <ng-container *ngIf="user">
         <div class="btn-group" dropdown>
+          <ng-container *ngIf="user">
+            <p>Welcome {{user.username | titlecase }}</p>
+          </ng-container>
           <button
             id="button-basic"
             dropdownToggle
@@ -22,16 +26,53 @@
             class="dropdown-menu dropdown-menu-right"
           >
             <li class="nav-item" class="dropdown-item">
-              <a class="nav-link" href="#"> My Campaigns </a>
+              <a
+                class="nav-link"
+                routerLink="/campaigns"
+                routerLinkActive="active"
+              >
+                Campaigns
+              </a>
             </li>
             <li class="nav-item" class="dropdown-item">
-              <a class="nav-link" href="#"> New Campaign </a>
+              <a
+                class="nav-link"
+                routerLink="/new-campaign"
+                routerLinkActive="active"
+              >
+                New Campaign
+              </a>
             </li>
-            <li class="nav-item" class="dropdown-item" (click)="logout()">
+            <li class="nav-item" class="dropdown-item">
+              <a
+                class="nav-link"
+                routerLink="/expenses"
+                routerLinkActive="active"
+              >
+                Expenses
+              </a>
+            </li>
+            <li class="nav-item" class="dropdown-item">
+              <a
+                class="nav-link"
+                routerLink="/friends"
+                routerLinkActive="active"
+              >
+                Friends
+              </a>
+            </li>
+
+            <li
+              *ngIf="accountService.currentUser$ | async"
+              class="nav-item"
+              class="dropdown-item"
+              (click)="logout()"
+            >
               <a class="nav-link" href="#"> Logout </a>
             </li>
           </ul>
         </div>
-      </div>
+      </ng-container>
+    </div>
   </nav>
 </div>

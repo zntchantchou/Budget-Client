@@ -1,0 +1,30 @@
+.signUpPage {
+  height: calc(100vh - 62px);
+  display: flex;
+  justify-content: center;
+}
+
+.signUpForm {
+  padding-top: 8em;
+  height: 28em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 50vw;
+}
+
+.signupBtn,
+.cancelBtn {
+  color: #fff;
+}
+.signupBtn {
+  background-color: #000000c7;
+}
+.userSelect {
+  width: 200px;
+}
+
+.cancelBtn {
+  background-color: red;
+}
