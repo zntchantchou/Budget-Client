@@ -20,17 +20,12 @@ export class LoginPageComponent implements OnInit {
   }
 
   login() {
-    console.log('[Login-form] login before request', this.model);
     this.accountService.login(this.model)
     .subscribe(res => {
-      console.log('[login-form] after request', res);
       console.log('this.loginBtnEnabled');
       this.loggedIn = true;
-      this.router.navigate(['/friends']);
-    }, err => {
-      console.log(err);
-      this.toaster.error(err.error);
-    }) ;
+      this.router.navigate(['/errors']);
+    })
   }
 
   goToSignUp() {

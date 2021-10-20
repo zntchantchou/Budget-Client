@@ -1,0 +1,12 @@
+<ng-container class="wrapper">
+  <button (click)="get400()">400 error</button>
+  <button (click)="get404()">404 error</button>
+  <button (click)="get401()">401 error</button>
+  <button (click)="get500()">500 error</button>
+  <button (click)="get400ValidationError()">400 validation error</button>
+  <div class="row mt-5" *ngIf="validationErrors.length > 0">
+    <li *ngFor="let error of validationErrors">
+      {{error}}
+    </li>
+  </div>
+</ng-container>
