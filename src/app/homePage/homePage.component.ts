@@ -2,12 +2,12 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { AccountService } from '../_services/account.service';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../_models/User';
+import { User } from '../_models/authUser';
 
 @Component({
   selector: 'app-homePage',
   templateUrl: './homePage.component.html',
-  styleUrls: ['./homePage.component.css']
+  styleUrls: ['./homePage.component.scss']
 })
 
 export class HomeComponent implements OnInit {

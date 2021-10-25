@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from '../_models/User';
+import { User } from '../_models/authUser';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 // this service can be injected in other places in the app
 @Injectable({
@@ -13,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 
 // a service is a Singleton, the data will not be destroyed during the life of the application
 export class AccountService {
-  baseUrl = 'https://localhost:5001/api/account/';
+  baseUrl = `${environment.apiUrl}account/`;
   // similar to a buffer
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
@@ -34,23 +35,23 @@ export class AccountService {
   }
 
   register(model: any) {
-    console.log('[Account Service] Register', model);
-    this.http.post(this.baseUrl + 'register', model)
-      .subscribe(user => {
+    this.http.post(this.baseUrl + 'register', model).subscribe(
+      (user) => {
         localStorage.setItem('user', JSON.stringify(user));
         this.currentUserSource.next(user as User);
-        console.log('[accountService] user saved', user);
-      }, (err) => {
-        const {errors} = err.error;
+      },
+      (err) => {
+        const { errors } = err.error;
         const errorMessages: string[] = Object.values(errors);
-        errorMessages.map((errMessage: string) => this.toaster.error(errMessage))
-      });
+        errorMessages.map((errMessage: string) =>
+          this.toaster.error(errMessage)
+        );
+      }
+    );
   }
 
   logout() {
-    console.log('[account-services] logged out');
     localStorage.removeItem('user');
-    // @ts-ignore
     this.currentUserSource.next(null);
   }
 

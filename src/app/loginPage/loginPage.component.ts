@@ -6,7 +6,7 @@ import { AccountService } from '../_services/account.service';
 @Component({
   selector: 'app-loginPage',
   templateUrl: './loginPage.component.html',
-  styleUrls: ['./loginPage.component.css'],
+  styleUrls: ['./loginPage.component.scss'],
 })
 export class LoginPageComponent implements OnInit {
 
@@ -24,7 +24,7 @@ export class LoginPageComponent implements OnInit {
     .subscribe(res => {
       console.log('this.loginBtnEnabled');
       this.loggedIn = true;
-      this.router.navigate(['/errors']);
+      this.router.navigate(['/users']);
     })
   }
 

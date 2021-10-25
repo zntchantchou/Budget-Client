@@ -1,0 +1,40 @@
+.userCard {
+  height: 5em;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+}
+
+.userCard:hover{
+  background-color: rgb(243, 242, 242);
+}
+.userCard:hover .avatarWrapper {
+  width: 5.5em;
+  height: 5.5em;
+  transition-duration: 0.15s;
+}
+
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+}
+
+.avatarWrapper img {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.userInfo { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.email {
+  font-style: italic;
+}

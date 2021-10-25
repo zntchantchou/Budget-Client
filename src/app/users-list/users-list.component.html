@@ -1,0 +1,6 @@
+<div class="usersList" *ngIf="users">
+  <h3 class="title">My friends</h3>
+  <ng-container *ngFor="let user of users">
+    <app-user-card [user]="user"></app-user-card>
+  </ng-container>
+</div>

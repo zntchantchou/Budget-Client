@@ -1,11 +1,12 @@
 {
-  "name": "dating-client",
+  "name": "budget-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "watch": "ng serve --watch",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build-watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
@@ -18,13 +19,17 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@angular/service-worker": "~12.2.0",
     "bootstrap": "^4.5.3",
     "bootswatch": "^5.1.1",
     "font-awesome": "^4.7.0",
+    "if-emoji": "^0.1.0",
     "ngx-bootstrap": "^7.1.0",
+    "ngx-emoj": "0.0.7",
     "ngx-toastr": "^14.1.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "twemoji": "^13.1.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -39,6 +44,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "schematics-scss-migrate": "^1.3.14",
     "typescript": "~4.3.5"
   }
 }
