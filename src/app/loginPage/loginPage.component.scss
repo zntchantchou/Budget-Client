@@ -1,9 +1,10 @@
+@import "../../assets/style/variables.scss";
+
 .loginPage {
   height: calc(100vh - 62px);
   display: flex;
   justify-content: center;
 }
-
 
 .loginForm {
   padding-top: 8em;

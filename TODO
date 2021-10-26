@@ -1,5 +1,9 @@
 ☐ Users list should only display current user's friends
 ☐ Friends page should display more about user and stats when user is clicked (panel)
-☐ Make Login page responsive
-☐ Restyle header
 
+todo:
+
+☐ Restyle all for mobile
+☐ Make routing modular
+☐ Add token verification at startup (log user in if possible)
+☐ On delete account: display dialog for cascade (tell user which campaigns (if admin) will be deleted)

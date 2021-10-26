@@ -8,8 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
-// import { TestComponent } from './test/test.component';
-
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
