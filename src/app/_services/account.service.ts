@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -22,6 +22,7 @@ export class AccountService {
   constructor(private http: HttpClient, private toaster: ToastrService) {}
 
   login(model: any) {
+    console.log("model ", model, this.baseUrl);
     return this.http.post(this.baseUrl + 'login', model).pipe(
       map((res: User) => {
         const user = res;

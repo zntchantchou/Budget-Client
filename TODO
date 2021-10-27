@@ -7,3 +7,5 @@ todo:
 ☐ Make routing modular
 ☐ Add token verification at startup (log user in if possible)
 ☐ On delete account: display dialog for cascade (tell user which campaigns (if admin) will be deleted)
+☐ Create overlay component 
+

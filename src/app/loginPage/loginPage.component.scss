@@ -1,25 +1,74 @@
 @import "../../assets/style/variables.scss";
 
 .loginPage {
-  height: calc(100vh - 62px);
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: $primary-light;
 }
 
 .loginForm {
-  padding-top: 8em;
-  height: 28em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 300px;
-  max-width: 50vw;
+  width: 80%;
+}
+
+.formTitle {
+  color: $primary-color;
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+.formGroup {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.formInput {
+  width: 100%;
+  outline: none;
+  border:none;
+  height: 2.5em;
+  background-color: $gray-light;
+  border-radius: 2%;
+  padding-left: 0.5em;
+}
+
+.inputLabel {
+  color: $gray-label;
+  font-size: 0.8em;
 }
 
 .signInBtn {
   cursor: not-allowed;
+  background-color: $primary-color;
+  border: none;
+  color: $primary-light;
 }
+
+
 .signupBtn {
-  background-color: #000000c7;
-  color: #fff;
+  background-color: $primary-light;
+  border: 3px solid $gray-medium;
+  margin-top: 2em;
+  color: $gray-dark;
 }
+
+.btn {
+  height: 3em;
+  border-radius: 5px;
+  box-shadow: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+

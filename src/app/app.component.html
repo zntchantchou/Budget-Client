@@ -1,5 +1,5 @@
 <!-- Add a component -->
 <div class='app-wrapper'>
-  <app-nav></app-nav>
+  <app-nav *ngIf="accountService.currentUser$ | async"></app-nav>
   <router-outlet></router-outlet>
 </div>

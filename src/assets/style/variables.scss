@@ -1,2 +1,11 @@
-$primary-color :#3493D5;
+$primary-color :#347fd5;
+$primary-light :#fff;
+
+$gray-light: #edededa6;
+$gray-medium: #afa5a58c;
+$gray-dark: #636363fa;
+$gray-label: lighten($gray-dark, 10%);
+
+$navbar-height: 4em;
+$heightMinusNav: calc(100vh - #{$navbar-height});
 

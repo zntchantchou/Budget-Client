@@ -1,7 +1,25 @@
-.nav-container {
-  height: 62px;
+@import '../../assets/style/variables.scss';
+
+.navbar {
+  height: $navbar-height;
+  background-color: $primary-color;
+  box-sizing: border-box;
+  padding: 1.5em;
 }
 
-.nav-title {
-  font-size: 1.5em;
+.navTitle {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  min-width: 70%;
+  font-size: 1.6em;
+  font-weight: 600;
+  .navLink {
+    color: white; 
+    text-decoration: none;
+  }
 }
+
+
+

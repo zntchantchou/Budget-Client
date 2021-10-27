@@ -20,11 +20,11 @@ export class LoginPageComponent implements OnInit {
   }
 
   login() {
+    console.log('this.loginBtnEnabled', this.model);
     this.accountService.login(this.model)
     .subscribe(res => {
-      console.log('this.loginBtnEnabled');
       this.loggedIn = true;
-      this.router.navigate(['/users']);
+      this.router.navigate(['/errors']);
     })
   }
 

@@ -1,8 +1,8 @@
-<div class="container nav-container">
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-    <div class="container-fluid">
-      <a class="navbar-brand nav-title" href="#">BonsComptes</a>
-      <li class="nav-item" class="dropdown-item">
+<nav class="navbar">
+  <div class="navTitle">
+    <a class="navLink" href="#">BonsComptes</a>
+  </div>
+      <!-- <li class="nav-item" class="dropdown-item">
         <a
           class="nav-link"
           routerLink="/errors"
@@ -10,7 +10,7 @@
         >
           Errors
         </a>
-      </li>
+      </li> -->
       <!--  this should only appear to a logged in user -->
       <ng-container *ngIf="user">
         <div class="btn-group" dropdown>
@@ -81,6 +81,4 @@
           </ul>
         </div>
       </ng-container>
-    </div>
-  </nav>
-</div>
+    </nav>

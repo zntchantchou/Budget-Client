@@ -1,26 +1,28 @@
 <!-- this #variable is called a "template reference variable" -->
 
 <div class="loginPage">
+  <div class="formTitle">
+    <h2>Bicount</h2>
+  </div>
   <form #loginForm="ngForm" autocomplete="off" class="loginForm">
-    <h2 class="form-title">Login</h2>
-    <div class="form-group">
-      <label for="login-username" class="form-label">Username</label>
+    <div class="formGroup">
+      <label for="login-username" class="inputLabel">Username</label>
       <input
         type="text"
         [(ngModel)]="model.username"
         #currentUsername
-        class="form-control"
+        class="formInput"
         id="login-username"
         name="username"
-      />
-    </div>
-
-    <div class="form-group">
-      <label for="login-password" class="form-label">Password</label>
-      <input
+        />
+      </div>
+      
+      <div class="formGroup">
+        <label for="login-password" class="inputLabel">Password</label>
+        <input
         type="password"
         [(ngModel)]="model.password"
-        class="form-control"
+        class="formInput"
         id="login-password"
         name="password"
       />
@@ -28,7 +30,7 @@
 
     <button
       type="submit"
-      class="btn btn-primary"
+      class="btn signInBtn"
       [disabled]="!(model.username && model.password)"
       (click)="login()"
     >
