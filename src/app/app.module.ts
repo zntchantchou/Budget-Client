@@ -17,11 +17,12 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserCardComponent } from './user-card/user-card.component';
-import { NgxEmojModule } from 'ngx-emoj';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TestComponent } from './test/test.component';
 import { EmojiPickerModule } from './emoji-picker/emoji-picker.module';
+import { CampaignsComponent } from './campaigns/campaigns.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { EmojiPickerModule } from './emoji-picker/emoji-picker.module';
     UsersListComponent,
     UserCardComponent,
     TestComponent,
+    CampaignsComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { EmojiPickerModule } from './emoji-picker/emoji-picker.module';
     BrowserAnimationsModule,
     FormsModule,
     SharedModule,
+    MatListModule,
     EmojiPickerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

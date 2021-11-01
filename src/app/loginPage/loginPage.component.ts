@@ -24,7 +24,7 @@ export class LoginPageComponent implements OnInit {
     this.accountService.login(this.model)
     .subscribe(res => {
       this.loggedIn = true;
-      this.router.navigate(['/errors']);
+      this.router.navigate(['/campaigns']);
     })
   }
 

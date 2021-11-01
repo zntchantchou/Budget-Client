@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { HttpClient } from '@angular/common/http'; 
 import { AccountService } from '../_services/account.service';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../_models/authUser';
+import { User } from '../_models/AuthUser';
 
 @Component({
   selector: 'app-homePage',

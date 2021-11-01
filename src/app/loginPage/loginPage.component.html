@@ -6,14 +6,14 @@
   </div>
   <form #loginForm="ngForm" autocomplete="off" class="loginForm">
     <div class="formGroup">
-      <label for="login-username" class="inputLabel">Username</label>
+      <label for="login-email" class="inputLabel">Email</label>
       <input
         type="text"
-        [(ngModel)]="model.username"
+        [(ngModel)]="model.email"
         #currentUsername
         class="formInput"
-        id="login-username"
-        name="username"
+        id="login-email"
+        name="email"
         />
       </div>
       
@@ -31,7 +31,6 @@
     <button
       type="submit"
       class="btn signInBtn"
-      [disabled]="!(model.username && model.password)"
       (click)="login()"
     >
       Log In

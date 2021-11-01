@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { User } from '../_models/AuthUser';
+import { Campaign } from '../_models/Campaign';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,22 +12,11 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class CampaignService {
   baseUrl = environment.apiUrl;
   constructor(private http: HttpClient) {}
 
-  getUsers() {
-    return this.http.get<User[]>(this.baseUrl + 'users', httpOptions);
-  }
-
-  getUserById(id: number) {
-    return this.http.get<User>(this.baseUrl + 'user/' + id, httpOptions);
-  }
-
-  getUserByEmail(email: string) {
-    return this.http.get<User>(
-      this.baseUrl + 'user/email' + email,
-      httpOptions
-    );
+  getUserCampaigns() {
+    return this.http.get<Campaign[]>(this.baseUrl + 'campaign', httpOptions);
   }
 }

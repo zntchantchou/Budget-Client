@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from '../_models/authUser';
+import { User } from '../_models/AuthUser';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
 

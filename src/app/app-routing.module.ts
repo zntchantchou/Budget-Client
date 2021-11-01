@@ -9,6 +9,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestComponent } from './test/test.component';
+import { MessagesComponent } from './messages/messages.component';
+import { CampaignsComponent } from './campaigns/campaigns.component';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -17,6 +19,7 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
+      {path: 'campaigns', component: CampaignsComponent},
       { path: 'register', component: RegisterComponent },
       { path: 'errors', component: TestErrorsComponent },
       { path: 'friends', component: UsersListComponent },

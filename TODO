@@ -3,9 +3,15 @@
 
 todo:
 
-☐ Restyle all for mobile
-☐ Make routing modular
-☐ Add token verification at startup (log user in if possible)
-☐ On delete account: display dialog for cascade (tell user which campaigns (if admin) will be deleted)
-☐ Create overlay component 
+☐ rethink nav
+☐ Restyle nav
+☐ Display current User's campaigns in a list 
 
+
+later:
+  
+  ☐ Create overlay component 
+  ☐ Add token verification at startup (log user in if possible)
+  ☐ Make routing modular
+  ☐ On delete account: display dialog for cascade (tell user which campaigns (if admin) will be deleted)
+  
