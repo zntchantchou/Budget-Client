@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras, ActivatedRoute } from '@angular/router';
 import { Campaign } from '../_models/Campaign';
 import { CampaignService } from '../_services/campaign.service';
 
@@ -9,7 +10,7 @@ import { CampaignService } from '../_services/campaign.service';
 })
 export class CampaignsComponent implements OnInit {
 
-  constructor(private campaignService: CampaignService) { }
+  constructor(private campaignService: CampaignService, private router: Router, private route: ActivatedRoute) { }
   campaigns: Campaign[];
   loading = true;
   ngOnInit(): void {
@@ -18,5 +19,11 @@ export class CampaignsComponent implements OnInit {
       console.log("data", data);
       this.campaigns = data; 
     })
+  }
+
+
+  goToCampaign(title: string) {
+    console.log("clicked is ", title);
+    this.router.navigate([title], {relativeTo: this.route});
   }
 }

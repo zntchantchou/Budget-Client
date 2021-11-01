@@ -1,6 +1,8 @@
-<mat-nav-list *ngFor="let campaign of campaigns">
-  <mat-list-item > 
-    <span class="listItemTitle" matLine>{{ campaign.title }}</span>
-    <p matLine class="listItemText">{{ campaign.description }}</p>
+<mat-action-list *ngFor="let campaign of campaigns">
+  <mat-list-item>
+    <div (click)="goToCampaign(campaign.title)">
+      <span class="listItemTitle" matLine>{{ campaign.title }}</span>
+      <p matLine class="listItemText">{{ campaign.description }}</p>
+    </div> 
   </mat-list-item>
-</mat-nav-list>
+</mat-action-list>
